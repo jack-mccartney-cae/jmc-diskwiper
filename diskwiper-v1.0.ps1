@@ -6,3 +6,9 @@ $Model = (Get-CimInstance Win32_ComputerSystem).Model
     SerialNumber = $Serial
     Model = $Model
 } | Export-Csv ".\WipeLog.csv" -Append -NoTypeInformation
+
+Start-Sleep -Seconds 10
+
+Clear-LocalDisk -Force -Confirm:$false
+
+Start-Sleep -Seconds 20
