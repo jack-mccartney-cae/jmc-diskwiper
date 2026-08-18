@@ -8,7 +8,7 @@ Write-Host "Device Model = $Model"
     DateTime = Get-Date
     SerialNumber = $Serial
     Model = $Model
-} | Export-Csv ".\WipeLog.csv" -Append -NoTypeInformation
+} | Export-Csv "e:\WipeLog.csv" -Append -NoTypeInformation
 
 Write-Host "Proceeding to wipe in 10 Seconds..."
 
