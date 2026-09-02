@@ -3,6 +3,7 @@ $Serial = (Get-CimInstance Win32_BIOS).SerialNumber
 Write-Host "Device Serial = $Serial"
 $Model = (Get-CimInstance Win32_ComputerSystem).Model
 Write-Host "Device Model = $Model"
+$DateTime = Get-Date
 
 [PSCustomObject]@{
     DateTime = Get-Date
