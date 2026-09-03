@@ -26,7 +26,7 @@ Write-Host "Wipe Complete"
     Manufacturer = $Manufacturer
     Model = $Model
     SerialNumber = $Serial
-} | Export-Csv $LogFile -NoTypeInformation
+} | Export-Csv $LogFile -Append -NoTypeInformation
 
 Write-Host "Device with Serial ($Serial) has been wiped at ($Date) and has been logged"
 Write-Host "Script ending in 20 seconds..."
