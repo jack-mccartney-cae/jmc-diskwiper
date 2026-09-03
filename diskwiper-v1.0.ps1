@@ -10,7 +10,7 @@ Write-Host "Device Model = $Model"
 $Date = Get-Date
 Write-Host "Current Date and Time = $Date"
 
-$USBDrive = (Get-Volume | Where-Object FileSystemLabel -eq "OSDCloudUSB").DriveLetter
+$USBDrive = (Get-Volume | Where-Object FileSystemLabel -eq "OSDCloudFiles").DriveLetter
 $LogFile = "$($USBDrive):\WipeLog.csv"
 
 Write-Host "Proceeding to wipe in 10 Seconds..."
