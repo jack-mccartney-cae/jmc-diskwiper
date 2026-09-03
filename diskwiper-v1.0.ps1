@@ -29,5 +29,7 @@ Write-Host "Wipe Complete"
 } | Export-Csv $LogFile -Append -NoTypeInformation
 
 Write-Host "Device with Serial ($Serial) has been wiped at ($Date) and has been logged"
-Write-Host "Script ending in 20 seconds..."
+Write-Host "Script ending and system shutting down in 20 seconds..."
 Start-Sleep -Seconds 20
+
+Wpeutil Shutdown
